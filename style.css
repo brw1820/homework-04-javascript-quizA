@@ -1,0 +1,18 @@
+#remaining-time {
+    margin-right: auto;
+    font-size: 30px;
+    float: right;
+}
+
+#Highscore {
+    font-size:30px;
+    color: plum;
+}
+
+.container {
+    background-color: royalblue;
+}
+
+.jumbotron {
+    background-color: skyblue ;
+}

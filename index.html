@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Javascript Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+        <div class="row" class="text-center">
+                <div class="col-md">
+                    <div id="Highscore">Highscore:</div>
+                        <div id="remaining-time">Time Remaining:</div>
+                        
+                    
+                </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="jumbotron" id="quiz-screen">
+                <div class="col-md text-align-center" id=introEl>
+                </div>
+                <h1 class="text-center">Javascript Code Quiz</h1>
+                <p id="openingPrompt">Answer as many questions in the given time. Good luck!
+                </p>
+                <button type="button btn-primary" id="startButton">Start</button>
+                <div class="btn-group-vertical" id="answers">
+                <button id="solution1" class="button btn-secondary">Solution</button>
+                <button id="solution2" class="button btn-secondary">Solution</button>
+                <button id="solution3" class="button btn-secondary">Solution</button>
+                <button id="solution4" class="button btn-secondary">Solution</button>
+            </div>
+            </div>
+     </div>
+    </main>
+    <script src="./script.js"></script>
+    </body>
+    </html>
