@@ -1,30 +1,3 @@
-// // GIVEN I am taking a code quiz
-// // WHEN I click the start button
-// // THEN a timer starts and I am presented with a question
-// // WHEN I answer a question
-// // THEN I am presented with another question
-// // WHEN I answer a question incorrectly
-// // THEN time is subtracted from the clock
-// // WHEN all questions are answered or the timer reaches 0
-// // THEN the game is over
-// // WHEN the game is over
-// // THEN I can save my initials and score
-// // ```
-// GIVEN I am taking a code quiz
-// WHEN I click the start button
-// THEN a timer starts and I am presented with a question
-// WHEN I answer a question
-// THEN I am presented with another question
-// WHEN I answer a question incorrectly
-// THEN time is subtracted from the clock
-// WHEN all questions are answered or the timer reaches 0
-// THEN the game is over
-// WHEN the game is over
-// THEN I can save my initials and score
-// ```
-
-// The following animation demonstrates the application functionality:
-
 
 var timeEl = document.querySelector("time");
 var mainEl = document.getElementById("main");
@@ -79,9 +52,10 @@ function startTime() {
 
 //   imgEl.setAttribute("src", "images/image_1.jpg");
 //   mainEl.appendChild(imgEl);
-var currentQuestion = questionsArray[currentQuestionIndex];
+
 
 function displayQuestions() {
+var currentQuestion = questionsArray[currentQuestionIndex];
 startButton.remove();
 quizscreen.innerHTML = "";
 var newEl=document.createElement("h4");
@@ -103,8 +77,17 @@ for (var i = 0; i < currentQuestion.answers.length; i++)    {
     console.log(answersElement);
     quizscreen.append(answersElement);
     console.log(quizAnswers);
-}
-}
+    answersElement.addEventListener("click", function() {
+      currentQuestionIndex++;
+      console.log(currentQuestionIndex);
+      displayQuestions();
+    })
+//   if (questionsArray[0].rightAnswer);
+//   alert("correct!")
+// }else {
+//   alert("incorrect!")
+// }
+}}
 // document.getElementsById("quiz-screen").innerhtml="";
 // document.getElementById("startButton").addEventListener("click", function(){})
 
