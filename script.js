@@ -93,14 +93,15 @@ quizscreen.append(newEl);
 // quizscreen.append(newAnswers);
 // console.log(newAnswers);
 for (var i = 0; i < currentQuestion.answers.length; i++)    {
-    answersElement = document.createElement("button");
-    answersElement.setAttribute("id", "answers");
+    var answersElement = document.createElement("button");
+    answersElement.setAttribute("class", "answers-i");
     answersElement.setAttribute("class", "button btn-secondary");
     answersElement.setAttribute("data-index", i);
-    console.log(answersElement);
+   
     var quizAnswers = currentQuestion.answers[i];
     answersElement.textContent = quizAnswers;
-    quizscreen.append(quizAnswers);
+    console.log(answersElement);
+    quizscreen.append(answersElement);
     console.log(quizAnswers);
 }
 }
@@ -109,15 +110,16 @@ for (var i = 0; i < currentQuestion.answers.length; i++)    {
 
 
 
-function nextQuestion()    {
-
-}
+// function nextQuestion()    {
+// nextQ = questionsArray[currentQuestionIndex[1]];
+// newEl1.textContent = 
+// }
 
 startButton.addEventListener("click", function() {
 displayQuestions();
 startTime()
 });
-
+// quizAnswers.addEventListener("click", nextQuestion())
 // How I want the quiz to work:
 
 // When I hit the "Start"  button , I want it to start the timer and enter the slide for the first question. 
