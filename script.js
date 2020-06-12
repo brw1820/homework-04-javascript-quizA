@@ -9,32 +9,32 @@ var quizscreen = document.getElementById("quiz-screen");
 var questionsArray =  [{
   question: "Commonly used data types DO NOT include:",
   answers: ["strings", "booleans", "strings", "alerts"],
-  rightAnswer: 3,
+  rightAnswer: "strings",
 },
 {
   question: "The condition in an if/else statement is enclosed within:",
   answers: ["quotes", "curly brackets", "parentheses", "square brackets"],
-  rightAnswer: 2,
+  rightAnswer: "curly brackets",
 }, {
   question: "Arrays in Javscript can be use to store:",
   answers: ["numbers and strings", "other arrays", "booleans", "all of the above"],
-  rightAnswer: 4,
+  rightAnswer: "all of the above",
 }, {
   question: "String values must be enclosed within ______ when being assigned to variables.",
   answers: ["commas", "curly brackets", "quotes", "parentheses"],
-  rightAnswer: 3,
+  rightAnswer: "quotes",
 },  {
   question: "A very useful tool used during development and debugging for printing content to the debugger is:",
   answers: ["Javascript", "terminal/bash", "for loops", "console log"],
-  rightAnswer: 4,
+  rightAnswer: "console log",
 }];
 
 var currentQuestionIndex = 0;
-
+var userScore = 0
 ;
 
 function startTime() {
-  var secondsLeft = 75
+  var secondsLeft = "75";
   var timerInterval = setInterval(function() {
     secondsLeft--;
     timer.textContent = secondsLeft + " seconds left";
@@ -74,13 +74,23 @@ for (var i = 0; i < currentQuestion.answers.length; i++)    {
    
     var quizAnswers = currentQuestion.answers[i];
     answersElement.textContent = quizAnswers;
-    console.log(answersElement);
+   
     quizscreen.append(answersElement);
-    console.log(quizAnswers);
-    answersElement.addEventListener("click", function() {
+ 
+    answersElement.addEventListener("click", function(event) {
       currentQuestionIndex++;
-      console.log(currentQuestionIndex);
+      console.log(event.target);
       displayQuestions();
+      var userchoice = event.target.textContent;
+      if  (userchoice === currentQuestion.rightAnswer)  {
+        alert("correct!");
+      userScore++;
+      } else {
+        secondsLeft=secondsLeft-10;
+        alert("incorrect!");
+        
+      }
+       console.log(userScore);
     })
 //   if (questionsArray[0].rightAnswer);
 //   alert("correct!")
