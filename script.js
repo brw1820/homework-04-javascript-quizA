@@ -41,6 +41,7 @@ function startTime() {
 
     if(secondsLeft === 0) {
       clearInterval(timerInterval);
+      quizscreen.style = "display: none";
         }
   }, 1000);
 }

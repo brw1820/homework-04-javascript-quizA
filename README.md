@@ -28,9 +28,7 @@ Proceed to run the index.html from the repository file in your browser.
 ## Usage 
 
 This HTML, Javascript, and CSS file provides a template for creating a four question, multiple choice quiz relating to Javascript.  
-
-![Test Application](./Contact.PNG)
-![Test Application](./Portfolio.PNG)
+![Test quiz](./Assets/javascriptquiz1.PNG)
 
 ## Credits
 
